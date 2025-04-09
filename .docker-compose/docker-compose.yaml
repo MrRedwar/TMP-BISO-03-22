@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+
+  app:
+    image: API
+    container_name: APPER
+    environment:
+      DB_PORT: 5433
+      DB_HOST: database
+      DB_USER: postgres
+      DB_PASSWROD: postgres
+      DB_NAME: dev
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
